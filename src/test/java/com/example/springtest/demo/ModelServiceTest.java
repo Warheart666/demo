@@ -20,17 +20,16 @@ class ModelServiceTest {
 
         Model model = new Model(1, "test");
 
+
+        System.out.println("saved " + modelService.save(model));
+
+        Model mode2 = new Model(2, "test");
+
         try {
-            System.out.println("saved " + modelService.save(model));
-        }
-        catch (Exception e)
-        {
+            System.out.println("saved " + modelService.save(mode2));
+        } catch (Exception e) {
             System.out.println("ZZZZZZZZZZZZZZZZZZ");
         }
-
-            Model mode2 = new Model(2, "test");
-            System.out.println("saved " + modelService.save(mode2));
-
 
 
     }

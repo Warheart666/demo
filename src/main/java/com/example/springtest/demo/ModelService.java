@@ -3,7 +3,7 @@ package com.example.springtest.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.validation.Valid;
+import javax.transaction.Transactional;
 
 /**
  * Created by WarhearT on 17.11.2020.
@@ -16,10 +16,8 @@ public class ModelService {
     @Autowired
     ModelRep modelRep;
 
-
-    public Model save(@Valid Model model) {
-
-//        throw new RuntimeException("asd");
+    @Transactional
+    public Model save(Model model) {
         return modelRep.save(model);
     }
 
